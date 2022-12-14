@@ -1,6 +1,6 @@
 from pathlib import Path
 import os
-from ..dbpass import *  
+from .dbpass import *  
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
