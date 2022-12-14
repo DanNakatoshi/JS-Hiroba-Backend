@@ -11,7 +11,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!kmh6jf=bhsf_g+h5(o_$^c^nadst*jp5fh%ngn4*wfydj_v)i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['127.0.0.1', '172.104.81.40']
 
@@ -78,9 +78,9 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'js_hiroba_db',
-            'USER': 'postgres',
-            'PASSWORD': postgrespw,
+            'NAME': dbname,
+            'USER': dbuser,
+            'PASSWORD': dbpassword,
             'HOST': '127.0.0.1',
             'PORT': '5432',
         }
