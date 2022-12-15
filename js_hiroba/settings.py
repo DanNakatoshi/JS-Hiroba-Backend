@@ -8,13 +8,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = secret_key
+SECRET_KEY = 'django-insecure-!kmh6jf=bhsf_g+h5(o_$^c^nadst*jp5fh%ngn4*wfydj_v)i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '172.104.81.40']
-
+ALLOWED_HOSTS = ['asameshi-api.cloud', 'www.asameshi-api.cloud', '127.0.0.1', '172.104.81.40']
 
 # Application definition
 
