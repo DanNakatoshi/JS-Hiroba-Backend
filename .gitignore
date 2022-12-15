@@ -1,6 +1,6 @@
 # Postgres PW #
-dbpass.py
-./dbpass.py/dbpass.py
+credential.py
+./dbpass.py/credential.py
 
 # Django #
 
