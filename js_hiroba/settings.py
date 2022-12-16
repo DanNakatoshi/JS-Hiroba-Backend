@@ -1,6 +1,6 @@
 from pathlib import Path
 import os
-from .credential import *  
+from .credential import *
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -11,9 +11,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-!kmh6jf=bhsf_g+h5(o_$^c^nadst*jp5fh%ngn4*wfydj_v)i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['asameshi-api.cloud', 'www.asameshi-api.cloud', '127.0.0.1', '172.104.81.40']
+ALLOWED_HOSTS = ['asameshi-api.cloud',
+                 'www.asameshi-api.cloud', '127.0.0.1', '172.104.81.40']
 
 # Application definition
 
@@ -24,11 +25,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Libraries
+    'corsheaders',
     'rest_framework',
+    # Apps
     'command',
 ]
 
 MIDDLEWARE = [
+    # Added CORS
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -81,7 +87,7 @@ else:
             'USER': dbuser,
             'PASSWORD': dbpassword,
             'HOST': '127.0.0.1',
-            'PORT': '5432',
+            # 'PORT': '5432',
         }
     }
 
@@ -127,3 +133,15 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CORS_ALLOWED_ORIGINS = [
+"https://js-hiroba.com",
+"http://localhost",
+"http://127.0.0.1",
+"http://192.168.0.143"
+]
+
+CORS_ALLOW_METHODS = [
+'GET',
+]
