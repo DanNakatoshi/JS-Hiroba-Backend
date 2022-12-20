@@ -137,14 +137,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ORIGIN_ALLOW_ALL = True
 
+ALLOWED_HOSTS=['*']
 
-CORS_ALLOWED_ORIGINS = [
-"https://js-hiroba.com",
-"http://localhost",
-"http://127.0.0.1:5173",
-"http://192.168.0.143"
-]
+# CORS_ALLOWED_ORIGINS = [
+#     "http://js-hiroba.com",
+#     "https://js-hiroba.com",
+#     "http://localhost",
+#     "http://127.0.0.1:5173",
+#     "http://192.168.0.143"
+# ]
 
 CORS_ALLOW_METHODS = [
-'GET',
+    'GET',
 ]
